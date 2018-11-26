@@ -92,9 +92,10 @@ let carModels = [];
 // console.log(carModels)
 
 for (let i = 0; i < inventory.length; i++) { //exposes all models
-    counter = 0;
+    let counter = 0;
     for (let j = 0; j < carModels.length; j++) {
         if (inventory[i]["car_model"] == carModels[j]) {
+            i++;
             break;
         }
         if (inventory[i]["car_model"] > carModels[j]) {
